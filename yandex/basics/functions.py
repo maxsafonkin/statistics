@@ -26,3 +26,5 @@ def covar(X: list[float], Y: list[float]) -> float:
     sum_of_centered_products = sum([(X[i] - X_mean)*(Y[i] - Y_mean) for i in range(X_len)])
     return 1 / (X_len - 1) * sum_of_centered_products
 
+def corr(X: list[float], Y: list[float]) -> float:
+    return covar(X, Y) / (std(X) * std(Y))
