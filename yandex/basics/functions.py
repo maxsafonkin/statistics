@@ -1,3 +1,5 @@
+from collections import Counter
+
 def mean(X: list[float]) -> float:
     return sum(X)/len(X)
 
@@ -28,3 +30,11 @@ def covar(X: list[float], Y: list[float]) -> float:
 
 def corr(X: list[float], Y: list[float]) -> float:
     return covar(X, Y) / (std(X) * std(Y))
+
+def F(X: list[int | float | str], decimal: int = 2) -> dict[int | float | str, float]:
+    count_values = Counter(X)
+    total = sum(count_values.values())
+    probabilities = {
+        value: round(freq / total, decimal) for (value, freq) in count_values.items()
+    }
+    return probabilities
