@@ -12,13 +12,11 @@
     - Standard Deviation
 
 2. Relationship between variables:
-
     - Covariation
     - Correlation
     - Comparison of categories
 
-3. Distributions
-
+3. Distributions:
     - General Population
     - Sample
     - Random Variable
